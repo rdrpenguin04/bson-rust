@@ -62,7 +62,7 @@ impl SerializerHint {
 }
 
 impl<'a> Serializer<'a> {
-    pub(crate) fn new(bytes: &'a mut Vec<u8>) -> Self {
+    pub fn new(bytes: &'a mut Vec<u8>) -> Self {
         let start_index = bytes.len();
         Self {
             bytes,
