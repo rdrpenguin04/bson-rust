@@ -25,6 +25,7 @@ mod raw;
 mod serde;
 
 pub use self::serde::Serializer;
+pub use self::raw::Serializer as RawSerializer;
 
 #[rustfmt::skip]
 use ::serde::{ser::Error as SerdeError, Serialize};
