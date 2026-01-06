@@ -22,7 +22,7 @@ use crate::{
 use document_serializer::DocumentSerializer;
 
 /// Serializer used to convert a type `T` into raw BSON bytes.
-pub(crate) struct Serializer<'a> {
+pub struct Serializer<'a> {
     bytes: &'a mut Vec<u8>,
 
     /// The index into `bytes` where the current serialization started.
