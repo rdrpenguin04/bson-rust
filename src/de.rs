@@ -25,7 +25,7 @@ pub(crate) mod raw;
 mod serde;
 
 pub use self::serde::Deserializer;
-pub use self::raw::Deserializer as RawDeserializer;
+pub use self::raw::RawDeserializer;
 
 use std::io::Read;
 
