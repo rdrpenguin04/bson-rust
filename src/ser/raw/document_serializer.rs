@@ -7,12 +7,12 @@ use crate::{
 
 use super::Serializer;
 
-pub(crate) struct DocumentSerializationResult<'a, 'b> {
+pub struct DocumentSerializationResult<'a, 'b> {
     pub(crate) root_serializer: &'a mut Serializer<'b>,
 }
 
 /// Serializer used to serialize document or array bodies.
-pub(crate) struct DocumentSerializer<'a, 'b> {
+pub struct DocumentSerializer<'a, 'b> {
     root_serializer: &'a mut Serializer<'b>,
     num_keys_serialized: usize,
     start: usize,
