@@ -21,7 +21,7 @@ use super::{document_serializer::DocumentSerializer, Serializer};
 
 /// A serializer used specifically for serializing the serde-data-model form of a BSON type (e.g.
 /// [`Binary`]) to raw bytes.
-pub(crate) struct ValueSerializer<'a, 'b> {
+pub struct ValueSerializer<'a, 'b> {
     root_serializer: &'a mut Serializer<'b>,
     state: SerializationStep,
 }
@@ -605,7 +605,7 @@ impl SerializeStruct for &mut ValueSerializer<'_, '_> {
     }
 }
 
-pub(crate) struct CodeWithScopeSerializer<'a, 'b> {
+pub struct CodeWithScopeSerializer<'a, 'b> {
     start: usize,
     doc: DocumentSerializer<'a, 'b>,
 }
