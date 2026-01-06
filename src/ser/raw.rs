@@ -385,7 +385,7 @@ impl<'a, 'b> serde::Serializer for &'a mut Serializer<'b> {
     }
 }
 
-pub(crate) enum StructSerializer<'a, 'b> {
+pub enum StructSerializer<'a, 'b> {
     /// Serialize a BSON value currently represented in serde as a struct (e.g. ObjectId)
     Value(ValueSerializer<'a, 'b>),
 
@@ -424,7 +424,7 @@ enum VariantInnerType {
 
 /// Serializer used for enum variants, including both tuple (e.g. Foo::Bar(1, 2, 3)) and
 /// struct (e.g. Foo::Bar { a: 1 }).
-pub(crate) struct VariantSerializer<'a, 'b> {
+pub struct VariantSerializer<'a, 'b> {
     root_serializer: &'a mut Serializer<'b>,
 
     /// Variants are serialized as documents of the form `{ <variant name>: <document or array> }`,
